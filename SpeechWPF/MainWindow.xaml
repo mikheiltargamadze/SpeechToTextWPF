@@ -1,0 +1,21 @@
+﻿<Window x:Class="SpeechWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800"
+        DataContext="{DynamicResource SpeechViewModel}">
+    <Grid>
+        <StackPanel Orientation="Vertical">
+            <Button Height="50" Content="Login" Command="{Binding LoginCommand}"/>
+
+
+            <Button Height="50" Content="Browser" Command="{Binding BrowseCommand}"/>
+            <Button Height="50" Content="Upload" Command="{Binding UploadCommand}"/>
+            <Button Height="50" Content="GetText" Command="{Binding GetTextCommand}"/>
+            <Button Height="50" Content="Play" Command="{Binding PlayCommand}"/>
+            <TextBlock Height="50" Text="{Binding ResultText}" TextWrapping="Wrap"/>
+        </StackPanel>
+    </Grid>
+</Window>
